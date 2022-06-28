@@ -4,4 +4,4 @@ services:
     env: ruby
     region: frankfurt
     buildCommand: bundle install
-    startCommand: ruby app.rb
+    startCommand: bundle exec ruby app.rb
