@@ -3,5 +3,5 @@ services:
     type: pserv
     env: ruby
     region: frankfurt
-    buildCommand: true
-    startCommand: true
+    buildCommand: bundle install
+    startCommand: ruby app.rb
