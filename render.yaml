@@ -4,4 +4,4 @@ services:
     env: ruby
     region: frankfurt
     buildCommand: true
-    startCommand: bash
+    startCommand:  while true; do echo 'Hit CTRL+C'; sleep 1; done
