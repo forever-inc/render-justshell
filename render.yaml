@@ -1,0 +1,6 @@
+services:
+  name: just-shell
+  env: ruby
+  region: frankfurt
+  buildCommand: true
+  startCommand: true
