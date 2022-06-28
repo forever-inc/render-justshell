@@ -1,5 +1,6 @@
 services:
   name: just-shell
+  type: pserv
   env: ruby
   region: frankfurt
   buildCommand: true
