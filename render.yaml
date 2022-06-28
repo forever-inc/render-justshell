@@ -1,7 +1,7 @@
 services:
-  name: justshell
-  type: pserv
-  env: ruby
-  region: frankfurt
-  buildCommand: true
-  startCommand: true
+  - name: just-shell
+    type: pserv
+    env: ruby
+    region: frankfurt
+    buildCommand: true
+    startCommand: true
