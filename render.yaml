@@ -4,4 +4,4 @@ services:
     env: ruby
     region: frankfurt
     buildCommand: true
-    startCommand: true
+    startCommand: bash
