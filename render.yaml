@@ -1,7 +1,7 @@
 services:
   - name: just-shell
-    type: pserv
+    type: worker
     env: ruby
     region: frankfurt
-    buildCommand: bundle install
-    startCommand: bundle exec ruby app.rb
+    buildCommand: true
+    startCommand: true
