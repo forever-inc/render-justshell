@@ -2,6 +2,6 @@ services:
   - name: just-shell
     type: worker
     env: ruby
-    region: frankfurt
+    region: ohio
     buildCommand: true
     startCommand:  while true; do echo '.'; sleep 1; done
