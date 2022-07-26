@@ -9,8 +9,8 @@ pg_restore -c -O -F c -d $STORE_DB_URL db.dump
 rm db.dump
 echo "store complete"
 
-pg_dump $MARS_DUMP_URL -f db.dump -F c
-pg_restore -c -O -F c -d $MARS_DB_URL db.dump
+pg_dump $MARS_MAIN_DUMP_URL -f db.dump -F c
+pg_restore -c -O -F c -d $MARS_MAIN_DB_URL db.dump
 rm db.dump
 echo "mars complete"
 
