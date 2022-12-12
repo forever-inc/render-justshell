@@ -5,27 +5,27 @@ cd /var/data
 start=`date +%s`
 
 pg_dump $STORE_DUMP_URL_HEROKU -f db.dump -F c
-pg_restore --verbose --clean --no-acl --no-owner -h $STORE_DB -U postgres -d store_db db.dump
+pg_restore -c -O -F c -d $AURORA_STORE_URL db.dump
 rm db.dump
 echo "store complete"
 
 pg_dump $NOTIFICATIONS_DUMP_URL_HEROKU -f db.dump -F c
-pg_restore --verbose --clean --no-acl --no-owner -h $NOTIFICATIONS_DB -U postgres -d notifications_db db.dump
+pg_restore -c -O -F c -d $AURORA_NOTIFICATIONS_URL db.dump
 rm db.dump
 echo "notifications complete"
 
 pg_dump $DESKTOP_API_PROD_DUMP_URL_HEROKU -f db.dump -F c
-pg_restore --verbose --clean --no-acl --no-owner -h $DESKTOP_API_DB -U postgres -d desktop_db db.dump
+pg_restore -c -O -F c -d $AURORA_DESKTOP_API_URL db.dump
 rm db.dump
 echo "desktop-api complete"
 
 pg_dump $CONVERSION_PROD_DUMP_URL_HEROKU -f db.dump -F c
-pg_restore --verbose --clean --no-acl --no-owner -h $CONVERSION_DB -U postgres -d conversion_db db.dump
+pg_restore -c -O -F c -d $AURORA_CONVERSION_URL db.dump
 rm db.dump
 echo "conversion complete"
 
 pg_dump $MARS_MAIN_DUMP_URL_HEROKU -f db.dump -F c
-pg_restore --verbose --clean --no-acl --no-owner -h $MARS_MAIN_DB -U postgres -d mars_main db.dump
+pg_restore -c -O -F c -d $AURORA_MARS_MAIN_URL db.dump
 rm db.dump
 echo "mars main complete"
 
